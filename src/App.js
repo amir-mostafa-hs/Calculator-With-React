@@ -1,7 +1,27 @@
 import React from "react";
 import "./App.css";
+import NumBtn from "./components/Button";
+import ranKey from "./components/CreateRandomKey";
 
 function App() {
+  const btnTest = [
+    "C",
+    "÷",
+    "×",
+    "-",
+    "1",
+    "2",
+    "3",
+    "+",
+    "4",
+    "5",
+    "6",
+    "^",
+    "7",
+    "8",
+    "9",
+    "=",
+  ];
   return (
     <React.Fragment>
       <main className="container">
@@ -16,6 +36,15 @@ function App() {
                 .replace(/(\..*?)\..*/g, "$1");
             }}
           />
+          {btnTest.map((item) => {
+            return (
+              <NumBtn
+                key={ranKey()}
+                colorStyle={isNaN(item) ? "btn-operator" : "btn-number"}
+                btnValue={item}
+              />
+            );
+          })}
         </aside>
       </main>
     </React.Fragment>

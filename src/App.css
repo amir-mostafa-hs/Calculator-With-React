@@ -19,19 +19,50 @@
   justify-items: center;
   align-content: center;
   grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  column-gap: 10px;
+  row-gap: 8px;
 }
 
 .inputNumber {
-  width: 70%;
+  width: 90%;
   height: 5vh;
+  margin-bottom: 30px;
   font-size: 2rem;
   border: none;
   border-radius: 10px;
   padding-left: 10px;
   opacity: 0.8;
+  grid-column: span 4;
 }
 .inputNumber:focus {
   outline: none;
   opacity: 1;
   border: 3px solid gray;
+}
+
+.btn-operator {
+  width: 90%;
+  height: 10vh;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(43, 224, 2);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.btn-number {
+  width: 90%;
+  height: 10vh;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(255, 123, 0);
+  font-size: 2rem;
+  color: white;
+}
+.btn-operator:active,
+.btn-number:active {
+  transform: scale(0.95);
 }
