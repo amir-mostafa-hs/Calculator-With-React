@@ -1,6 +1,5 @@
-const NumBtn = ({ colorStyle, btnValue }) => {
+const CreateBtn = ({ colorStyle, btnValue }) => {
   return <button className={colorStyle}>{btnValue}</button>;
 };
 
-export default NumBtn;
-// key={kayValue}
+export default CreateBtn;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import NumBtn from "./components/Button";
+import CreateBtn from "./components/Button";
 import ranKey from "./components/CreateRandomKey";
 
 function App() {
@@ -32,13 +32,13 @@ function App() {
             className="inputNumber"
             onInput={(evt) => {
               evt.target.value = evt.target.value
-                .replace(/[^0-9.&-]/g, "")
+                .replace(/[^0-9.]/g, "")
                 .replace(/(\..*?)\..*/g, "$1");
             }}
           />
           {btnTest.map((item) => {
             return (
-              <NumBtn
+              <CreateBtn
                 key={ranKey()}
                 colorStyle={isNaN(item) ? "btn-operator" : "btn-number"}
                 btnValue={item}
